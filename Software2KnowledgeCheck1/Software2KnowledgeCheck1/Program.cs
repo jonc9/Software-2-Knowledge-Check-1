@@ -7,10 +7,9 @@ public class Program
         var constructionLogic = new ConstructionLogic();
         var apartment = new Apartment();
         var highRise = new HighRise();
-        var building = new Building();
+        var building = new BuildingLocation();
 
-        var buildings = new List<Building>() { highRise, building};
-
+        var buildings = new List<BuildingLocation>() { highRise, building};
 
         constructionLogic.CreateBuilding(apartment, buildings);
     }

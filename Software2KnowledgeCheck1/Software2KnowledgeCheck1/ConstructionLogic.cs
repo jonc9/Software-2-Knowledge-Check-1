@@ -8,7 +8,7 @@ namespace Software2KnowledgeCheck1
 {
     internal class ConstructionLogic
     {
-        public void CreateBuilding<T>(T building, List<Building> buildings) where T : Building
+        public void CreateBuilding<T>(T building, List<BuildingLocation> buildings) where T : BuildingLocation
         {
             // Get materials
             var materialRepo = new MaterialsRepo();
@@ -24,7 +24,7 @@ namespace Software2KnowledgeCheck1
             }
         }
 
-        public bool ConstructBuilding<T>(List<Material> materials, bool permit, bool zoning) where T : Building
+        public bool ConstructBuilding<T>(List<Material> materials, bool permit, bool zoning) where T : BuildingLocation
         {
             if (permit && zoning)
             {

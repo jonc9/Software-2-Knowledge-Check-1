@@ -12,7 +12,7 @@ namespace Software2KnowledgeCheck1
 
         public int StreetNumber { get; set; }
 
-        public int ZipCode { get; set; }
+        public int ZipCode { get; set; } //added line 15 to 18 from City.cs
         public string Name { get; set; }
         public string State { get; set; }
         public int Population { get; set; }

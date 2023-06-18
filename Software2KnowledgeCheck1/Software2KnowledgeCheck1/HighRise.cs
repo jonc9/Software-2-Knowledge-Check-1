@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Software2KnowledgeCheck1
 {
-    internal class HighRise : Building
+    internal class HighRise : Apartment
     {
         public int NumberOfStories { get; set; }
         public string OwnerName { get; set; }

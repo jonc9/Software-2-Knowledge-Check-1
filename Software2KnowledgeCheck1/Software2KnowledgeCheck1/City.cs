@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Software2KnowledgeCheck1
 {
-    internal class City
+    public interface ICity // changed to interface for Interface segregation principle and I felt it made more since it isn't related to the other classes.
     {
         public int ZipCode { get; set; }
         public string Name { get; set; }

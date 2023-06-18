@@ -10,7 +10,7 @@ namespace Software2KnowledgeCheck1
     {
         internal override string MaterialConstructionFirstStep()
         {
-            return "Lay the foundation.";
+            return "Start laying foundation.";
         }
     }
 }

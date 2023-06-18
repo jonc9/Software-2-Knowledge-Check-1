@@ -24,22 +24,14 @@ namespace Software2KnowledgeCheck1
             }
         }
 
-        public bool ConstructBuilding<T>(List<string> materials, bool permit, bool zoning) where T : Building
+        public bool ConstructBuilding<T>(List<Material> materials, bool permit, bool zoning) where T : Building
         {
             if (permit && zoning)
             {
                 foreach (var material in materials)
                 {
-                    if (material == "concrete")
-                    {
-                        // start laying foundation
-                    }
-                    else if (material == "Steel")
-                    {
-                        // Start building structure
-                    }
-                    // etc etc...
-
+                    var firstStep = material.MaterialConstructionFirstStep();
+                    Console.WriteLine(firstStep);
                 }
                 return true;
             }

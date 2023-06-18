@@ -6,10 +6,15 @@ using System.Threading.Tasks;
 
 namespace Software2KnowledgeCheck1
 {
-    internal class BuildingLocation
+    internal class BuildingLocation : ICity // changed from Building to BuildingLocation. i felt it more suitable due to its properties.
     {
         public string Street { get; set; }
 
         public int StreetNumber { get; set; }
+
+        public int ZipCode { get; set; }
+        public string Name { get; set; }
+        public string State { get; set; }
+        public int Population { get; set; }
     }
 }

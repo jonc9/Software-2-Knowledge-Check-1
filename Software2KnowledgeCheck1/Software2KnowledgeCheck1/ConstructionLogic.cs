@@ -8,7 +8,7 @@ namespace Software2KnowledgeCheck1
 {
     internal class ConstructionLogic
     {
-        public void CreateApartment(Apartment apartment, List<Building> buildings)
+        public void CreateBuilding<T>(T building, List<Building> buildings) where T : Building
         {
             // Get materials
             var materialRepo = new MaterialsRepo();
@@ -16,11 +16,11 @@ namespace Software2KnowledgeCheck1
 
             var permitRepo = new ZoningAndPermitRepo();
 
-            var buildingWasMade = ConstructBuilding<Apartment>(materialsNeeded, permitRepo.GetPermit(), permitRepo.ZoningApproves());
+            var buildingWasMade = ConstructBuilding<T>(materialsNeeded, permitRepo.GetPermit(), permitRepo.ZoningApproves());
 
             if (buildingWasMade)
             {
-                buildings.Add(apartment);
+                buildings.Add(building);
             }
         }
 
@@ -31,7 +31,7 @@ namespace Software2KnowledgeCheck1
                 foreach (var material in materials)
                 {
                     var firstStep = material.MaterialConstructionFirstStep();
-                    Console.WriteLine(firstStep);
+                    Console.WriteLine(firstStep) ;
                 }
                 return true;
             }
